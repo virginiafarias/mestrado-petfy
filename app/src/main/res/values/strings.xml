@@ -22,4 +22,13 @@
     <string name="animal_listagem_label">Meus animais</string>
     <string name="title_activity_animal_detalhe">AnimalDetalheActivity</string>
 
+    <!-- Detalhe Animal - Fragmentos -->
+    <string name="fragment_detalhe">Detalhes</string>
+    <string name="fragment_vacina">Vacina</string>
+    <string name="fragment_medicacao">Medicação</string>
+    <string name="fragment_vermifugacao">Vermifugação</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
