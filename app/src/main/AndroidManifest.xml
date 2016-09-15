@@ -11,8 +11,7 @@
         <activity
             android:name=".AnimalCadastroActivity"
             android:label="@string/animal_cadastro_label"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".MainActivity"
             android:label="Início"
@@ -27,6 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AnimalDetalheActivity"
+            android:label="@string/title_activity_animal_detalhe"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

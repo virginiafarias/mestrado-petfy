@@ -20,5 +20,6 @@
 
     <!-- Listagem de animais -->
     <string name="animal_listagem_label">Meus animais</string>
+    <string name="title_activity_animal_detalhe">AnimalDetalheActivity</string>
 
 </resources>

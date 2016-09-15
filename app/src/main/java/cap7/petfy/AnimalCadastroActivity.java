@@ -40,11 +40,6 @@ public class AnimalCadastroActivity extends AppCompatActivity {
 
     public void onSalvar(View view) {
         AnimalController animalController = new AnimalController(getBaseContext());
-        //EditText nome = (EditText) findViewById(R.id.edit_animal_nome);
-        //EditText nascimento = (EditText) findViewById(R.id.edit_animal_nasc);
-        //RadioButton sexo = (RadioButton) findViewById(R.id.rd_animal_sexo);
-        //RadioButton especie = (RadioButton) findViewById(R.id.rd_animal_especie);
-
         int sexoSelectedId = sexo.getCheckedRadioButtonId();
         int especieSelectedId = especie.getCheckedRadioButtonId();
         Button sexoButton = (Button) findViewById(sexoSelectedId);
