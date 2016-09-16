@@ -16,6 +16,7 @@ import java.util.List;
 
 import adapter.AdapterListViewAnimal;
 import controller.AnimalController;
+import dao.CriaBanco;
 import model.Animal;
 
 public class AnimalListagemActivity extends AppCompatActivity {
@@ -44,6 +45,11 @@ public class AnimalListagemActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void addAnimal(View view) {
+        Intent intent = new Intent(view.getContext(), AnimalCadastroActivity.class);
+        startActivity(intent);
     }
 
 }

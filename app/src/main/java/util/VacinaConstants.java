@@ -18,7 +18,7 @@ public class VacinaConstants {
             "(" + VACINA_ID + " integer primary key autoincrement,"
             + VACINA_NOME + " text,"
             + VACINA_DATA + " text,"
-            + VACINA_VACINADO + " text,"
+            + VACINA_VACINADO + " integer,"
             + VACINA_ANIMAL_ID + " integer,"
             + "FOREIGN KEY(" + VACINA_ANIMAL_ID + ") REFERENCES "
             + AnimalConstants.ANIMAL_TABELA + "(" + AnimalConstants.ANIMAL_ID + ")"

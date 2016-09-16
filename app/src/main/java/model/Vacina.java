@@ -11,9 +11,11 @@ public class Vacina {
 
     private String nome;
 
-    private Date data;
+    private String data;
 
     private boolean vacinado;
+
+    private Animal animal;
 
     public int getId() {
         return id;
@@ -31,11 +33,11 @@ public class Vacina {
         this.nome = nome;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -45,6 +47,14 @@ public class Vacina {
 
     public void setVacinado(boolean vacinado) {
         this.vacinado = vacinado;
+    }
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
     }
 
     @Override

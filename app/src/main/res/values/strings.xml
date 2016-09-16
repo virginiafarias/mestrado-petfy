@@ -23,12 +23,19 @@
     <string name="title_activity_animal_detalhe">AnimalDetalheActivity</string>
 
     <!-- Detalhe Animal - Fragmentos -->
+    <string name="frag_detalhe_info">Informações</string>
     <string name="fragment_detalhe">Detalhes</string>
     <string name="fragment_vacina">Vacina</string>
     <string name="fragment_medicacao">Medicação</string>
     <string name="fragment_vermifugacao">Vermifugação</string>
 
+    <!-- Fragmento vacinação -->
+    <string name="frag_vacina_nome">Nome da vacina</string>
+    <string name="frag_vacina_data">Data da vacina</string>
+    <string name="frag_vacina_btn_salvar">Salvar</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_vacina">AddVacinaActivity</string>
 
 </resources>

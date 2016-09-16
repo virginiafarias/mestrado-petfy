@@ -1,5 +1,6 @@
 package cap7.petfy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -53,12 +54,8 @@ public class AnimalCadastroActivity extends AppCompatActivity {
 
         boolean resultado = animalController.cadastrar(animal);
 
-        List<Animal> animais = animalController.getAll();
-
-        String msg = resultado ? "Animal cadastrado com sucesso" : "Erro ao cadastrar animal";
-
-        Toast toast = Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT);
-        toast.show();
+        Intent intent = new Intent(view.getContext(), AnimalListagemActivity.class);
+        startActivity(intent);
     }
 
 }

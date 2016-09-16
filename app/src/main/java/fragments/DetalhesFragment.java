@@ -6,25 +6,44 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import cap7.petfy.R;
+import controller.AnimalController;
+import model.Animal;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class DetalhesFragment extends Fragment {
 
+    private TextView txtNome;
+    private TextView txtEspecie;
+    private TextView txtNasc;
+    private TextView txtSexo;
 
     public DetalhesFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle bundle) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detalhes, container, false);
+        View view = inflater.inflate(R.layout.fragment_detalhes, container, false);
+        int id = getArguments().getInt("animal_id");
+        AnimalController animalController = new AnimalController(getContext());
+        Animal animal = animalController.getById(id);
+        txtNome = (TextView) view.findViewById(R.id.txt_frag_detalhe_nome_val);
+        txtNome.setText(animal.getNome());
+        txtEspecie = (TextView) view.findViewById(R.id.txt_frag_detalhe_especie_val);
+        txtEspecie.setText(animal.getEspecie());
+        txtNasc = (TextView) view.findViewById(R.id.txt_frag_detalhe_nasc_val);
+        txtNasc.setText(animal.getNascimento());
+        txtSexo = (TextView) view.findViewById(R.id.txt_frag_detalhe_sexo_val);
+        txtSexo.setText(animal.getSexo());
+
+        return view;
     }
 
 }

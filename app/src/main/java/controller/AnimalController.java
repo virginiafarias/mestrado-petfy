@@ -64,4 +64,28 @@ public class AnimalController {
 
         return animais;
     }
+
+    public Animal getById(int id) {
+        db = banco.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + AnimalConstants.ANIMAL_TABELA + " WHERE "
+                + AnimalConstants.ANIMAL_ID + " = " + id, null);
+        Animal animal = new Animal();
+
+        if(cursor.moveToFirst()) {
+            do {
+                animal.setId(cursor.getInt(cursor.getColumnIndex(AnimalConstants.ANIMAL_ID)));
+                animal.setNome(cursor.getString(cursor.getColumnIndex(AnimalConstants.ANIMAL_NOME)));
+                animal.setNascimento(cursor.getString(cursor.getColumnIndex(AnimalConstants.ANIMAL_NASCIMENTO)));
+                animal.setSexo(cursor.getString(cursor.getColumnIndex(AnimalConstants.ANIMAL_SEXO)));
+                animal.setEspecie(cursor.getString(cursor.getColumnIndex(AnimalConstants.ANIMAL_ESPECIE)));
+
+            } while (cursor.moveToNext());
+        }
+
+        if(cursor != null && !cursor.isClosed()) {
+            cursor.close();
+        }
+
+        return animal;
+    }
 }

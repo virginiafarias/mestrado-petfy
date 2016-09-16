@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -29,25 +31,27 @@ public class AnimalDetalheActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Bundle bundle = getIntent().getExtras();
+
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragments(new DetalhesFragment(), "Detalhes");
-        viewPagerAdapter.addFragments(new VacinaFragment() , "Vacinação");
-        viewPagerAdapter.addFragments(new MedicacaoFragment(), "Medicação");
-        viewPagerAdapter.addFragments(new VermifugacaoFragment(), "Vermifugação");
+        Fragment detalhes = new DetalhesFragment();
+        detalhes.setArguments(bundle);
+        Fragment vacinacao = new VacinaFragment();
+        vacinacao.setArguments(bundle);
+        Fragment medicacao = new MedicacaoFragment();
+        medicacao.setArguments(bundle);
+        Fragment vermifugacao = new DetalhesFragment();
+        vermifugacao.setArguments(bundle);
+        viewPagerAdapter.addFragments(detalhes, "Detalhes");
+        viewPagerAdapter.addFragments(vacinacao, "Vacinação");
+        viewPagerAdapter.addFragments(medicacao, "Medicação");
+        viewPagerAdapter.addFragments(vermifugacao, "Vermifugação");
 
         viewPager.setAdapter(viewPagerAdapter);
+        viewPager.setCurrentItem(bundle.getInt("aba"));
         tabLayout.setupWithViewPager(viewPager);
-
-
-        Bundle bundle = getIntent().getExtras();
-        int id = bundle.getInt("animal_id");
-
-
-        TextView txt = (TextView) findViewById(R.id.textView2);
-        txt.setText(String.valueOf(id));
-
 
     }
 

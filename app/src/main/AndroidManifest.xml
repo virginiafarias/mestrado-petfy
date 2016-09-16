@@ -11,7 +11,7 @@
         <activity
             android:name=".AnimalCadastroActivity"
             android:label="@string/animal_cadastro_label"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="Início"
@@ -29,7 +29,16 @@
         <activity
             android:name=".AnimalDetalheActivity"
             android:label="@string/title_activity_animal_detalhe"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddVacinaActivity"
+            android:label="@string/title_activity_add_vacina"
+            android:parentActivityName=".AnimalDetalheActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cap7.petfy.AnimalDetalheActivity" />
+        </activity>
     </application>
 
 </manifest>
