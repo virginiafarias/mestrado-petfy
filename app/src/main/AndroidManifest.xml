@@ -39,6 +39,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cap7.petfy.AnimalDetalheActivity" />
         </activity>
+        <activity
+            android:name=".AddMedicacaoActivity"
+            android:label="@string/title_activity_add_medicacao"
+            android:parentActivityName=".AnimalDetalheActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cap7.petfy.AnimalDetalheActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import util.AnimalConstants;
+import util.MedicacaoConstants;
 import util.VacinaConstants;
 
 /**
@@ -24,6 +25,7 @@ public class CriaBanco extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(AnimalConstants.ANIMAL_TABLE_CREATE);
         db.execSQL(VacinaConstants.VACINA_TABLE_CREATE);
+        db.execSQL(MedicacaoConstants.MED_TABLE_CREATE);
 
     }
 

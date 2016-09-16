@@ -34,8 +34,14 @@
     <string name="frag_vacina_data">Data da vacina</string>
     <string name="frag_vacina_btn_salvar">Salvar</string>
 
+    <!-- Fragmento medicação -->
+    <string name="frag_med_nome">Nome do medicamento</string>
+    <string name="frag_med_data">Data da medicação</string>
+    <string name="frag_med_btn_salvar">Salvar</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_add_vacina">AddVacinaActivity</string>
+    <string name="title_activity_add_medicacao">AddMedicacaoActivity</string>
 
 </resources>
