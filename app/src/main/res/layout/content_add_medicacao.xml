@@ -44,7 +44,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/frag_vacina_btn_salvar"
+            android:text="@string/frag_med_btn_salvar"
             android:id="@+id/btn_salvar_med"
             android:layout_gravity="center"
             android:backgroundTint="@color/colorPrimary"

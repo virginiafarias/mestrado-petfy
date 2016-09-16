@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import util.AnimalConstants;
 import util.MedicacaoConstants;
 import util.VacinaConstants;
+import util.VermifugacaoConstants;
 
 /**
  * Created by Virginia Farias on 12/09/2016.
@@ -26,6 +27,7 @@ public class CriaBanco extends SQLiteOpenHelper {
         db.execSQL(AnimalConstants.ANIMAL_TABLE_CREATE);
         db.execSQL(VacinaConstants.VACINA_TABLE_CREATE);
         db.execSQL(MedicacaoConstants.MED_TABLE_CREATE);
+        db.execSQL(VermifugacaoConstants.VERM_TABLE_CREATE);
 
     }
 

@@ -3,7 +3,7 @@ package model;
 /**
  * Created by Virginia Farias on 14/09/2016.
  */
-public class Medicacao {
+public class Vermifugacao {
 
     private int id;
 
@@ -11,7 +11,7 @@ public class Medicacao {
 
     private String data;
 
-    private boolean medicado;
+    private boolean vermifugado;
 
     private Animal animal;
 
@@ -39,12 +39,12 @@ public class Medicacao {
         this.data = data;
     }
 
-    public boolean isMedicado() {
-        return medicado;
+    public boolean isVermifugado() {
+        return vermifugado;
     }
 
-    public void setMedicado(boolean medicado) {
-        this.medicado = medicado;
+    public void setVermifugado(boolean vermifugado) {
+        this.vermifugado = vermifugado;
     }
 
     public Animal getAnimal() {
@@ -60,9 +60,9 @@ public class Medicacao {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Medicacao medicacao = (Medicacao) o;
+        Vermifugacao vermifugacao = (Vermifugacao) o;
 
-        return id == medicacao.id;
+        return id == vermifugacao.id;
 
     }
 

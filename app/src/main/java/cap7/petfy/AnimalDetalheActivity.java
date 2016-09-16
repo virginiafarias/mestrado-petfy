@@ -42,7 +42,7 @@ public class AnimalDetalheActivity extends AppCompatActivity {
         vacinacao.setArguments(bundle);
         Fragment medicacao = new MedicacaoFragment();
         medicacao.setArguments(bundle);
-        Fragment vermifugacao = new DetalhesFragment();
+        Fragment vermifugacao = new VermifugacaoFragment();
         vermifugacao.setArguments(bundle);
         viewPagerAdapter.addFragments(detalhes, "Detalhes");
         viewPagerAdapter.addFragments(vacinacao, "Vacinação");

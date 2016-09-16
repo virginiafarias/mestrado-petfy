@@ -11,9 +11,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import controller.VacinaController;
+import controller.VermifugacaoController;
 import model.Vacina;
+import model.Vermifugacao;
 
-public class AddVacinaActivity extends AppCompatActivity {
+public class AddVermifugacaoActivity extends AppCompatActivity {
 
     private EditText nome;
     private EditText data;
@@ -21,28 +23,29 @@ public class AddVacinaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_vacina);
+        setContentView(R.layout.activity_add_vermifugacao);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        nome = (EditText) findViewById(R.id.edit_vacina_nome);
-        data = (EditText) findViewById(R.id.edit_vacina_data);
+        nome = (EditText) findViewById(R.id.edit_verm_nome);
+        data = (EditText) findViewById(R.id.edit_verm_data);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-   public void onSalvar(View view) {
-        VacinaController vacinaController = new VacinaController(getBaseContext());
-        Vacina vacina = new Vacina();
-        vacina.setNome(nome.getText().toString());
-        vacina.setData(data.getText().toString());
+    public void onSalvar(View view) {
+        VermifugacaoController vermController = new VermifugacaoController(getBaseContext());
+        Vermifugacao vermifugacao = new Vermifugacao();
+        vermifugacao.setNome(nome.getText().toString());
+        vermifugacao.setData(data.getText().toString());
 
         Bundle bundle = getIntent().getExtras();
-        bundle.putInt("aba", 1);
-        boolean resultado = vacinaController.cadastrar(vacina, bundle.getInt("animal_id"));
+        bundle.putInt("aba", 3);
+        boolean resultado = vermController.cadastrar(vermifugacao, bundle.getInt("animal_id"));
         Intent intent = new Intent(view.getContext(), AnimalDetalheActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
-
 
     }
 
